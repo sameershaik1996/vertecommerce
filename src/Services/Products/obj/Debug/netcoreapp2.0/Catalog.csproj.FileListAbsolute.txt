@@ -1,0 +1,11 @@
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\bin\Debug\netcoreapp2.0\Catalog.deps.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\bin\Debug\netcoreapp2.0\Catalog.runtimeconfig.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\bin\Debug\netcoreapp2.0\Catalog.runtimeconfig.dev.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\bin\Debug\netcoreapp2.0\Catalog.dll
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\bin\Debug\netcoreapp2.0\Catalog.pdb
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\obj\Debug\netcoreapp2.0\Catalog.csprojAssemblyReference.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\obj\Debug\netcoreapp2.0\Catalog.csproj.CoreCompileInputs.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\obj\Debug\netcoreapp2.0\Catalog.AssemblyInfoInputs.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\obj\Debug\netcoreapp2.0\Catalog.AssemblyInfo.cs
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\obj\Debug\netcoreapp2.0\Catalog.dll
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Products\obj\Debug\netcoreapp2.0\Catalog.pdb

@@ -1,0 +1,35 @@
+version: "3.2"
+
+networks:
+   frontend:
+   backend:
+
+services:
+   catalog:
+      build:
+         context: src\Services\Products
+         dockerfile: Dockerfile
+      environment:
+         - DatabaseServer=mssqlserver
+         - DatabaseName=vertecommerce_product
+         - DatabaseUser=sa
+         - DatabasePassword=Sa@admin
+      container_name: catalogapi
+      ports:
+         - "5000:80"
+      networks:
+         - backend
+         - frontend
+      depends_on:
+         - mssqlserver
+   mssqlserver:
+      image:  "microsoft/mssql-server-linux:latest"
+      ports:
+         - "1445:1433"
+
+      container_name: mssqlcontainer
+      environment:
+         - ACCEPT_EULA=Y
+         - SA_PASSWORD=Sa@admin
+      networks:
+         - backend        
