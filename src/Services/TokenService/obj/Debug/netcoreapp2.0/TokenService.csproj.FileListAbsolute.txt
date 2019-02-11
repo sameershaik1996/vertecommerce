@@ -1,0 +1,8 @@
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\bin\Debug\netcoreapp2.0\TokenService.deps.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\bin\Debug\netcoreapp2.0\TokenService.runtimeconfig.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\bin\Debug\netcoreapp2.0\TokenService.runtimeconfig.dev.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\bin\Debug\netcoreapp2.0\TokenService.dll
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.csprojAssemblyReference.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.csproj.CoreCompileInputs.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.AssemblyInfoInputs.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.AssemblyInfo.cs

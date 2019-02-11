@@ -16,7 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "src\Web\Store\Store.csproj", "{54A70F3D-01D6-4AB4-9D30-37DD1584B76E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "src\Web\Store\Store.csproj", "{54A70F3D-01D6-4AB4-9D30-37DD1584B76E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenService", "Src\Services\TokenService\TokenService.csproj", "{62771EBA-F891-44CF-A696-7C30CDA735F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{54A70F3D-01D6-4AB4-9D30-37DD1584B76E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54A70F3D-01D6-4AB4-9D30-37DD1584B76E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54A70F3D-01D6-4AB4-9D30-37DD1584B76E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62771EBA-F891-44CF-A696-7C30CDA735F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62771EBA-F891-44CF-A696-7C30CDA735F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62771EBA-F891-44CF-A696-7C30CDA735F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62771EBA-F891-44CF-A696-7C30CDA735F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{4F4D43D7-9A3D-4CC9-B27C-96D6340A8116} = {3AC0A975-FB63-42C0-A111-297DA2BF7790}
 		{9D46B9AD-6C1A-487D-876D-CFBCEABC2857} = {87986945-BEDC-4107-9C68-FA493EEE531C}
 		{54A70F3D-01D6-4AB4-9D30-37DD1584B76E} = {4F4D43D7-9A3D-4CC9-B27C-96D6340A8116}
+		{62771EBA-F891-44CF-A696-7C30CDA735F3} = {87986945-BEDC-4107-9C68-FA493EEE531C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BAE50F16-2741-4ACA-9ECD-100C180DC2E0}

@@ -8,4 +8,3 @@ C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Web\Store\o
 C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Web\Store\obj\Debug\netcoreapp2.0\Store.AssemblyInfo.cs
 C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Web\Store\obj\Debug\netcoreapp2.0\Store.dll
 C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Web\Store\obj\Debug\netcoreapp2.0\Store.pdb
-C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Web\Store\obj\Debug\netcoreapp2.0\Store.csprojAssemblyReference.cache
