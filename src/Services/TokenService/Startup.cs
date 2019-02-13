@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TokenService.Data;
 using TokenService.Models;
 using TokenService.Services;
+using VerteCommerce.Services.TokenService;
 
 namespace TokenService
 {
@@ -26,8 +27,17 @@ namespace TokenService
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddDbContext<ApplicationDbContext>(options =>
-				options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+			var databaseServer = Configuration["DatabaseServer"];
+			var databaseName = Configuration["DatabaseName"];
+			var databaseUser = Configuration["DatabaseUser"];
+			var databasePassword = Configuration["DatabasePassword"];
+			var connectionString = string.Format("Server={0};Database={1};User Id={2};Password={3};MultipleActiveResultSets=true", databaseServer, databaseName, databaseUser, databasePassword);
+			
+			services.AddDbContext<ApplicationDbContext>(dbContextOptions => dbContextOptions.UseSqlServer(connectionString));
+
+			//services.AddDbContext<ApplicationDbContext>(options =>
+				//options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 			services.AddIdentity<ApplicationUser, IdentityRole>()
 				.AddEntityFrameworkStores<ApplicationDbContext>()
@@ -35,6 +45,14 @@ namespace TokenService
 
 			// Add application services.
 			services.AddTransient<IEmailSender, EmailSender>();
+
+			services.AddIdentityServer()
+			   .AddDeveloperSigningCredential()
+			   .AddInMemoryPersistedGrants()
+			   .AddInMemoryIdentityResources(Config.GetIdentityResources())
+			   .AddInMemoryApiResources(Config.GetApiResources())
+			   .AddInMemoryClients(Config.GetClients(Config.GetUrls(Configuration)))
+			   .AddAspNetIdentity<ApplicationUser>();
 
 			services.AddMvc();
 		}
@@ -55,7 +73,9 @@ namespace TokenService
 
 			app.UseStaticFiles();
 
-			app.UseAuthentication();
+			app.UseIdentityServer();
+
+			 
 
 			app.UseMvc(routes =>
 			{

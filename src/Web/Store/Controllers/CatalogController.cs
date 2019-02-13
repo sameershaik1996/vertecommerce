@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Store.Models;
 using VerteCommerce.Web.Store.Models;
@@ -50,6 +51,7 @@ namespace Store.Controllers
 			return View(vm);
 		}
 
+		[Authorize]
 		public IActionResult About()
 		{
 			ViewData["Message"] = "Your application description page.";

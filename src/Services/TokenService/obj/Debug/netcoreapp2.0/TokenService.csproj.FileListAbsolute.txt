@@ -6,3 +6,7 @@ C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\To
 C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.csproj.CoreCompileInputs.cache
 C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.AssemblyInfoInputs.cache
 C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.AssemblyInfo.cs
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\bin\Debug\netcoreapp2.0\TokenService.pdb
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.dll
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\Src\Services\TokenService\obj\Debug\netcoreapp2.0\TokenService.pdb

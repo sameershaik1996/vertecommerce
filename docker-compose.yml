@@ -12,6 +12,8 @@ services:
       environment:
          - APPLICATION_ENVIRONMENT=Development
          - CatalogUrl=http://catalog
+         - IdentityUrl=http://172.17.42.225
+         - CallBackUrl=http://webmvc
       container_name: storefront
       ports:
          - "5500:80"
@@ -19,7 +21,27 @@ services:
          - frontend
       depends_on:
          - catalog
-         
+         - tokenserver
+   tokenserver:
+      build:
+         context: src\Services\TokenService
+         dockerfile: Dockerfile
+      environment:
+         -  APPLICATION_ENVIRONMENT=Development
+         -  DatabaseServer=mssqlserver
+         -  DatabaseName=tokenservice
+         -  DatabaseUser=sa
+         -  DatabasePassword=Sa@admin
+         -  mvcClient=http://webmvc
+      container_name: tokenserver
+      ports:
+         - "5100:80"
+      networks:
+         - backend  
+         - frontend
+      depends_on:
+         - mssqlserver 
+  
    catalog:
       build:
          context: src\Services\Products

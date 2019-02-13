@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-TokenService-67BB2F04-6BEF-4900-B6A7-25EB19F7703D</UserSecretsId>
+    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
     <RootNamespace>VerteCommerce.Services.TokenService</RootNamespace>
   </PropertyGroup>
 
