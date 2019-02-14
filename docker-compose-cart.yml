@@ -1,0 +1,29 @@
+version: "3.2"
+
+networks:
+   frontend:
+   backend:
+
+services:
+   cart:
+      image: cartimage
+      build:
+         context: src\Services\cart
+         dockerfile: Dockerfile 
+      environment:
+         - APPLICATION_ENVIRONMENT=Development
+      container_name: cart
+      ports:
+         - "5200:80"
+      networks:
+         - frontend
+         - backend 
+      depends_on:
+         - basket.data
+  
+   basket.data:
+      image: redis
+      ports:
+         - "6377:6379"  
+      networks:
+         - backend 

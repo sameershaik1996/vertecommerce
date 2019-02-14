@@ -1,0 +1,11 @@
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\obj\Debug\netcoreapp2.0\Cart.csprojAssemblyReference.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\obj\Debug\netcoreapp2.0\Cart.csproj.CoreCompileInputs.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\obj\Debug\netcoreapp2.0\Cart.AssemblyInfoInputs.cache
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\obj\Debug\netcoreapp2.0\Cart.AssemblyInfo.cs
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\bin\Debug\netcoreapp2.0\Cart.deps.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\bin\Debug\netcoreapp2.0\Cart.runtimeconfig.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\bin\Debug\netcoreapp2.0\Cart.runtimeconfig.dev.json
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\bin\Debug\netcoreapp2.0\Cart.dll
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\bin\Debug\netcoreapp2.0\Cart.pdb
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\obj\Debug\netcoreapp2.0\Cart.dll
+C:\Users\dvivert6\Desktop\learn code\VerteCommerce\VerteCommerce\src\Services\Cart\obj\Debug\netcoreapp2.0\Cart.pdb

@@ -8,8 +8,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-
-namespace Cart
+using StackExchange.Redis;
+using Swashbuckle.AspNetCore.Swagger;
+using VerteCommerce.Services.Cart;
+using VerteCommerce.Services.Cart.Data;
+using VerteCommerce.Services.Cart.Infrastructure.Filters;
+namespace VertCommerce.Services.Cart
 {
 	public class Startup
 	{
@@ -23,7 +27,34 @@ namespace Cart
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.AddMvc();
+			services.AddMvc(options=>
+			{
+				options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+			}).AddControllersAsServices();
+
+			services.Configure<CartSetting>(Configuration);
+
+			services.AddSingleton<ConnectionMultiplexer>(sp =>
+			{
+				var settings = sp.GetRequiredService<IOptions<CartSetting>>().Value;
+				var configuration = ConfigurationOptions.Parse(settings.RedisUrl, true);
+
+				configuration.ResolveDns = true;
+				configuration.AbortOnConnectFail = false;
+
+				return ConnectionMultiplexer.Connect(configuration);
+			});
+
+			services.AddTransient<IRepository, RedisCartRepository>();
+
+			services.AddSwaggerGen(c =>
+			{
+				c.DescribeAllEnumsAsStrings();
+				c.SwaggerDoc("v1", new Info { Title = "cart Api", Version = "v1" });
+
+			});
+
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +66,13 @@ namespace Cart
 			}
 
 			app.UseMvc();
+
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Cart API V1");
+			});
+
 		}
 	}
 }

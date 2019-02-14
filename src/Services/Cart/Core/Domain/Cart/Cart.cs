@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VerteCommerce.Services.Cart.Core.Domain.Cart
 {
-	public class Cart : BaseEntity
+	public class Cart 
 	{
 		public string BuyerId { get; set; }
 		public List<CartItem> Items { get; set; }

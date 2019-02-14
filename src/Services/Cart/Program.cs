@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Cart
+
+namespace VertCommerce.Services.Cart
 {
 	public class Program
 	{

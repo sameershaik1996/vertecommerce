@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VerteCommerce.Services.Cart.Data
+namespace VerteCommerce.Services.Cart
 {
-	public class CartRepository
+	public class CartSetting
 	{
+		public string RedisUrl { get; set; }
+
 	}
 }

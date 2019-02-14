@@ -5,27 +5,14 @@ using System.Threading.Tasks;
 
 namespace VerteCommerce.Services.Cart.Data
 {
-	public interface IRepository<TEntity> where TEntity : BaseEntity
+	using Core.Domain.Cart;
+	public interface IRepository 
 	{
 
-		TEntity GetById(Object id);
-
-		void Insert(TEntity entity);
-
-
-		/// <summary>
-		/// Update entity
-		/// </summary>
-		/// <param name="entity">Entity</param>
-		void Update(TEntity entity);
-
-
-		/// <summary>
-		/// Delete entity
-		/// </summary>
-		/// <param name="entity">Entity</param>
-		void Delete(TEntity entity);
-
+		Cart GetCart(string cartId);
+		IEnumerable<string> GetUsers();
+		Cart UpdateCart(Cart basket);
+		bool DeleteCart(string id);
 
 
 
