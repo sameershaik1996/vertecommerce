@@ -17,6 +17,8 @@ namespace VerteCommerce.Services.TokenService
 
 			urls.Add("Mvc", configuration.GetValue<string>("mvcClient"));
 
+			urls.Add("Cart", configuration.GetValue<string>("cartswagger"));
+
 			return urls;
 
 		}
@@ -51,7 +53,7 @@ namespace VerteCommerce.Services.TokenService
 						ClientSecrets = new [] { new Secret("vertecommerce".Sha256())},
 						AllowedGrantTypes = GrantTypes.Hybrid,
 
-						RedirectUris = {$"{clientUrls["Mvc"]}/signin-oidc"},
+						 RedirectUris = {$"{clientUrls["Mvc"]}/signin-oidc"},
 						PostLogoutRedirectUris = {$"{clientUrls["Mvc"]}/signout-callback-oidc"},
 						AllowAccessTokensViaBrowser = false,
 						AllowOfflineAccess = true,
@@ -63,8 +65,30 @@ namespace VerteCommerce.Services.TokenService
 							IdentityServerConstants.StandardScopes.OpenId,
 							IdentityServerConstants.StandardScopes.Profile,
 							IdentityServerConstants.StandardScopes.OfflineAccess,
-                        //  IdentityServerConstants.StandardScopes.Email,
-                            "orders",
+						  //  IdentityServerConstants.StandardScopes.Email,
+							 "orders",
+							"basket",
+
+						}
+
+				},
+					new Client
+					{
+						ClientId = "cartSwagger",
+						ClientSecrets = new [] { new Secret("vertecommerce_cart".Sha256())},
+						AllowedGrantTypes = GrantTypes.Implicit,
+
+						RedirectUris = {$"{clientUrls["Cart"]}/swagger/o2c.html" },
+						PostLogoutRedirectUris = {$"{clientUrls["Cart"]}/swagger"},
+						AllowAccessTokensViaBrowser = true,
+						AllowOfflineAccess = true,
+						
+						AlwaysIncludeUserClaimsInIdToken = true,
+						AllowedScopes = new List<string>
+						{
+
+							
+                            
 							"basket",
 
 						}

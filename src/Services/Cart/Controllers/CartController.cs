@@ -9,7 +9,10 @@ using VerteCommerce.Services.Cart.Data;
 namespace VerteCommerce.Services.Cart.Controllers
 {
 	using Core.Domain.Cart;
+	using Microsoft.AspNetCore.Authorization;
+
 	[Route("api/cart")]
+	[Authorize]
 	public class CartController : Controller
 	{
 

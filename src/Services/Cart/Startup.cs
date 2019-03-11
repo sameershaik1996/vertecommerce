@@ -9,10 +9,16 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using StackExchange.Redis;
+using Microsoft.AspNetCore.Http;
+
+using VerteCommerce.Services.Cart.Core.Domain.Cart;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.IdentityModel.Tokens.Jwt;
+using VerteCommerce.Services.Cart.Infrastructure.Filters;
 using VerteCommerce.Services.Cart;
 using VerteCommerce.Services.Cart.Data;
-using VerteCommerce.Services.Cart.Infrastructure.Filters;
+
 namespace VertCommerce.Services.Cart
 {
 	public class Startup
@@ -34,6 +40,8 @@ namespace VertCommerce.Services.Cart
 
 			services.Configure<CartSetting>(Configuration);
 
+			ConfigureAuthService(services);
+
 			services.AddSingleton<ConnectionMultiplexer>(sp =>
 			{
 				var settings = sp.GetRequiredService<IOptions<CartSetting>>().Value;
@@ -51,8 +59,48 @@ namespace VertCommerce.Services.Cart
 			{
 				c.DescribeAllEnumsAsStrings();
 				c.SwaggerDoc("v1", new Info { Title = "cart Api", Version = "v1" });
+				c.AddSecurityDefinition("oauth2", new OAuth2Scheme
+				{
+					Type = "oauth2",
+					Flow = "implicit",
+					AuthorizationUrl = $"{Configuration.GetValue<string>("IdentityUrl")}/connect/authorize",
+					TokenUrl = $"{Configuration.GetValue<string>("IdentityUrl")}/connect/token",
+					Scopes = new Dictionary<string, string>()
+					{
+						{ "basket", "Basket Api" }
+					}
+				});
+
+				c.OperationFilter<AuthorizeCheckOperationFilter>();
 
 			});
+
+
+		}
+
+
+		private void ConfigureAuthService(IServiceCollection services)
+		{
+			// prevent from mapping "sub" claim to nameidentifier.
+			JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
+			var identityUrl = Configuration.GetValue<string>("IdentityUrl");
+
+			services.AddAuthentication(options =>
+			{
+				options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+				options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+			}).AddJwtBearer(options =>
+			{
+				options.Authority = identityUrl;
+				options.RequireHttpsMetadata = false;
+				options.Audience = "basket";
+
+			});
+
+
+
 
 
 		}
@@ -71,6 +119,7 @@ namespace VertCommerce.Services.Cart
 			app.UseSwaggerUI(c =>
 			{
 				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Cart API V1");
+				c.ConfigureOAuth2("basketswaggerui", "", "", "Basket Swagger UI");
 			});
 
 		}

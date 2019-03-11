@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\dvivert6\\Desktop\\learn code\\VerteCommerce\\VerteCommerce\\src\\Services\\Cart\\Cart.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\dvivert6\\Desktop\\learn code\\VerteCommerce\\VerteCommerce\\src\\Services\\Cart\\Cart.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\dvivert6\\Desktop\\learn code\\VerteCommerce\\VerteCommerce\\src\\Services\\Cart\\Cart.csproj",
+        "projectName": "Cart",
+        "projectPath": "C:\\Users\\dvivert6\\Desktop\\learn code\\VerteCommerce\\VerteCommerce\\src\\Services\\Cart\\Cart.csproj",
+        "packagesPath": "C:\\Users\\dvivert6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dvivert6\\Desktop\\learn code\\VerteCommerce\\VerteCommerce\\src\\Services\\Cart\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dvivert6\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.All": {
+              "target": "Package",
+              "version": "[2.0.9, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.0.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
